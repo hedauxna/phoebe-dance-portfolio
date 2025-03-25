@@ -1,15 +1,55 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
-    background: #f8f8f8;
-    text-align: center;
 }
-header {
-    background: #333;
+
+/* Title Banner */
+.title-banner {
+    background-color: black;
     color: white;
-    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
-section {
-    padding: 20px;
+
+/* To ensure space for the banner at the top of the page */
+body {
+    padding-top: 80px; /* Adjust this value if needed */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.row {
+    margin-bottom: 40px; /* Keep space between sections */
+}
+
+/* Adjust image sizes but keep Bootstrap's responsive behavior */
+.row img {
+    max-width: 100%; /* Ensures images don't overflow */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 10px;
+}
+
+/* Keep paragraph sizes consistent */
+.row p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Reverse rows without breaking Bootstrap */
+.reverse {
+    flex-direction: row-reverse !important;
 }
