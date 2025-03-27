@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">   
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <!-- Title Banner -->
@@ -20,6 +21,24 @@
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </nav>
+        
+        <div class="gallery">
+            <img src="images/Phoebe-Cheer-Pose.JPG" alt="Image 1" onclick="openLightbox(this)">
+            <img src="images/Phoebe-Lyrical-Pose.JPG" alt="Image 2" onclick="openLightbox(this)">
+            <img src="images/Phoebe-Lyrical.jpg" alt="Image 3" onclick="openLightbox(this)">
+            <img src="images/Phoebe-POM-Leap.jpg" alt="Image 4" onclick="openLightbox(this)">
+            <img src="images/Phoebe-TEkit.jpg" alt="Image 4" onclick="openLightbox(this)">
+        </div>
+    
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-img" id="lightbox-img">
+            <div class="prev" onclick="changeImage(-1)">&#10094;</div>
+            <div class="next" onclick="changeImage(1)">&#10095;</div>
+        </div>
+    
+        <script src="script.js"></script>
 
         <!-- Bootstrap JS (Optional for interactive elements) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -13,9 +13,9 @@ body {
     text-align: center !important;
     font-size: 32px !important;
     font-weight: bold !important;
-    padding: 20px 0 !important;
+    padding: 10px 0 !important;
     position: fixed !important;
-    top: 0 !important;
+    top: 0px !important;
     left: 0 !important;
     width: 100% !important;
     z-index: 1000 !important;
@@ -26,19 +26,27 @@ body {
 }
 
 .subtitle {
-    background-color: rgb(56, 56, 56); /* Greyish background */
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 18px;
-    font-weight: normal;
-    padding: 5px 15px;
-    border-radius: 0px; /* Slightly rounded edges */
-    margin-top: 5px;
+    display: block;
+    background-color: rgb(0, 0, 0) !important;
+    color: white !important;
+    text-align: center !important;
+    font-size: 18px !important;
+    font-weight: normal !important;
+    padding: 5px 0 !important;
+    position: fixed !important;
+    top: 62px !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1001 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* To ensure space for the banner at the top of the page */
 body {
-    padding-top: 80px; /* Adjust this value if needed */
+    padding-top: 120px; /* Adjust this value if needed */
 }
 
 .container {
@@ -72,21 +80,39 @@ body {
 
 /* NAVBAR STYLING */
 .navbar {
-    background-color: #333;
-    padding: 10px 0;
-    text-align: center;
+    display: flex !important; 
+    justify-content: center !important; /* Center contents */
+    align-items: center !important; /* Center items vertically */
+    background-color: rgb(37, 37, 37) !important;
+    color: white !important;
+    text-align: center !important;
+    font-size: 18px !important;
+    font-weight: normal !important;
+    padding: 5px 0 !important; /* Add height for proper alignment */
+    position: fixed !important;
+    top: 99px !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
 }
 
+/* Ensure navbar list is centered */
 .navbar ul {
+    display: flex !important;
+    justify-content: center !important; /* Ensure items are centered */
+    align-items: center !important;
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Ensure it takes full width */
 }
 
+/* Ensure list items are spaced properly */
 .navbar li {
-    display: inline;
     margin: 0 15px;
 }
 
+/* Navbar links */
 .navbar a {
     text-decoration: none;
     color: white;
@@ -96,5 +122,66 @@ body {
 /* PAGE CONTENT */
 .content {
     text-align: center;
+    padding: 0px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     padding: 20px;
 }
+
+.gallery img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox-img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    color: white;
+    user-select: none;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
