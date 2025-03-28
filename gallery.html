@@ -23,11 +23,26 @@
         </nav>
         
         <div class="gallery">
-            <img src="images/Phoebe-Cheer-Pose.JPG" alt="Image 1" onclick="openLightbox(this)">
-            <img src="images/Phoebe-Lyrical-Pose.JPG" alt="Image 2" onclick="openLightbox(this)">
-            <img src="images/Phoebe-Lyrical.jpg" alt="Image 3" onclick="openLightbox(this)">
-            <img src="images/Phoebe-POM-Leap.jpg" alt="Image 4" onclick="openLightbox(this)">
-            <img src="images/Phoebe-TEkit.jpg" alt="Image 4" onclick="openLightbox(this)">
+            <div class="gallery-item">
+                <img src="images/Phoebe-Cheer-Pose.JPG" alt="Image 1" onclick="openLightbox(this)">
+                <p class="image-description">Cheer Pose</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/Phoebe-Lyrical-Pose.JPG" alt="Image 2" onclick="openLightbox(this)">
+                <p class="image-description">Lyrical Pose</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/Phoebe-Lyrical.jpg" alt="Image 3" onclick="openLightbox(this)">
+                <p class="image-description">Lyrical Performance</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/Phoebe-POM-Leap.jpg" alt="Image 4" onclick="openLightbox(this)">
+                <p class="image-description">POM Leap</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/Phoebe-TEkit.jpg" alt="Image 5" onclick="openLightbox(this)">
+                <p class="image-description">Team England</p>
+            </div>
         </div>
     
         <!-- Lightbox -->
@@ -38,7 +53,7 @@
             <div class="next" onclick="changeImage(1)">&#10095;</div>
         </div>
     
-        <script src="script.js"></script>
+        <script src="js/script.js"></script>
 
         <!-- Bootstrap JS (Optional for interactive elements) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
