@@ -135,8 +135,8 @@ body {
 
 .gallery img {
     margin-top: 20px;
-    width: 150px;
-    height: 100px;
+    width: 225px;
+    height: 150px;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -145,13 +145,14 @@ body {
 
 .gallery img:hover {
     transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Lightbox Styles */
 .lightbox {
     display: none;
     position: fixed;
-    top: 130px;
+    top: 60px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -192,4 +193,66 @@ body {
 
 .next {
     right: 20px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 55%; /* Move it lower */
+    left: 70%; /* Move it to the right */
+    transform: translate(-50%, -50%); /* Keep it centered based on its new position */
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #111; /* Dark background for contrast */
+    color: white;
+    font-size: 1rem;
+}
+
+.gallery-item {
+    text-align: center; /* Center everything */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Ensure everything is centered */
+}
+
+.gallery-item img {
+    display: block; /* Forces image to be on its own line */
+    max-width: 100%; /* Ensures responsiveness */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.image-description {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for contrast */
+    color: white;
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin-top: 10px; /* Space between image and text */
+    text-align: center; /* Center the text */
+    width: 80%; /* Keeps it nicely contained */
 }
